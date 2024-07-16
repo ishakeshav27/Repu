@@ -26,7 +26,7 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
 $student = $result->fetch_assoc();
-
+//Contents are used after the fetch
 // Logout logic
 if (isset($_POST['logout'])) {
     session_destroy();
